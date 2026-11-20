@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Research &amp; publications – EmElVee Engineering</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<style>
+:root{--teal:#0f6e56;--teal-d:#094536;--bg:#f6f8f6;--surface:#fff;--text:#16282b;--muted:#55696c;--line:#d9e2e1;--accent:#c98a3b;--on-teal:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--teal:#2fa386;--teal-d:#0a2b23;--bg:#0b1a16;--surface:#12291f;--text:#e6efea;--muted:#9bb5ab;--line:#24443a;--accent:#e0a458}}
+:root[data-theme="dark"]{--teal:#2fa386;--teal-d:#0a2b23;--bg:#0b1a16;--surface:#12291f;--text:#e6efea;--muted:#9bb5ab;--line:#24443a;--accent:#e0a458}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;letter-spacing:.2px}
+.brand img{width:34px;height:34px;flex:none;display:block}
+.brand small{display:block;font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.6px;text-transform:uppercase;line-height:1.1}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:18px}
+nav a:hover{color:var(--teal)}
+@media(max-width:620px){nav a:not(.cta){display:none}}
+.cta{background:var(--teal);color:var(--on-teal)!important;padding:8px 16px;border-radius:8px;font-weight:600}
+.hero{background:linear-gradient(160deg,var(--teal-d),var(--teal));color:#fff;padding:84px 0 76px}
+.hero h1{font-size:clamp(32px,6vw,52px);line-height:1.1;margin:0 0 18px;max-width:16em;letter-spacing:-.5px}
+.hero p{font-size:clamp(17px,2.4vw,20px);max-width:36em;margin:0 0 30px;opacity:.92}
+.eyebrow{display:inline-block;color:var(--accent);font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:14px}
+.btn{display:inline-block;padding:13px 24px;border-radius:9px;font-weight:600;text-decoration:none;margin:0 10px 10px 0}
+.btn.p{background:var(--accent);color:#1b1305}
+.btn.s{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+section{padding:72px 0}
+h2{font-size:clamp(26px,4vw,34px);margin:0 0 10px;letter-spacing:-.3px}
+.lead{color:var(--muted);max-width:40em;margin:0 0 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{margin:0 0 8px;font-size:18px;color:var(--teal)}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.pubs{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:14px}
+.pubs li{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:16px 20px}
+.pubs b{display:block;font-size:16px}
+.pubs span{color:var(--muted);font-size:14px}
+.pubs a{color:var(--teal);font-weight:600}
+.thesis{background:var(--teal-d);color:#fff;border-radius:14px;padding:24px}
+.thesis h3{margin:0 0 6px;font-size:18px}
+.thesis p{margin:0 0 10px;opacity:.92}
+.thesis a{color:var(--accent);font-weight:600}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.alt .card{background:var(--bg)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.step{padding-top:14px;border-top:3px solid var(--accent)}
+.step::before{counter-increment:s;content:"0" counter(s);font-weight:700;color:var(--accent);font-size:14px}
+.step h3{margin:4px 0 6px;font-size:18px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.num{font-size:34px;font-weight:700;color:var(--teal);line-height:1.1;margin-bottom:6px}
+.about{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:start}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.about p{margin:0 0 14px}
+.facts{list-style:none;padding:22px;margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;font-size:15px}
+.facts li{padding:8px 0;border-bottom:1px solid var(--line)}
+.facts li:last-child{border:0}
+.facts b{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.contact{background:var(--teal-d);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact p{max-width:34em;margin:0 auto 26px;opacity:.9}
+.contact a.mail{color:var(--accent);font-size:20px;font-weight:600;text-decoration:none}
+footer{padding:26px 0;font-size:13px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="brand" href="index.html" aria-label="EmElVee Engineering">
+<img src="assets/logo.svg" width="34" height="34" alt="EmElVee Engineering logo">
+<span>EmElVee<small>Engineering</small></span></a>
+<nav><a href="index.html#services">Services</a><a href="index.html#approach">Approach</a><a href="research.html">Research</a><a href="about.html">About</a><a class="cta" href="index.html#contact">Get in touch</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero" style="padding:60px 0 54px"><div class="wrap">
+<span class="eyebrow">Research</span>
+<h1>Research &amp; publications</h1>
+<p>The scientific foundation behind my diagnostic and analysis work: aero-engine condition monitoring, developed at TU Delft in collaboration with KLM Engine Services.</p>
+</div></div>
+
+<section><div class="wrap">
+<h2>Doctoral research</h2>
+<p class="lead">My PhD was a collaboration between TU Delft and KLM Engine Services, built around GSP, the Gas turbine Simulation Program owned by the Netherlands Aerospace Centre (NLR). It focused on using measured engine data to estimate the health of individual engine components, supporting condition-based maintenance. The work produced one journal paper and three conference papers.</p>
+<div class="thesis"><h3>PhD dissertation</h3>
+<p><i>Gas path analysis for enhanced aero-engine condition monitoring and maintenance</i><br>Delft University of Technology, 2017</p>
+<a href="https://repository.tudelft.nl/record/uuid:e1079009-84c2-482d-afe4-e1f9fde0d137" target="_blank" rel="noopener">Read it in the TU Delft repository →</a></div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Publications</h2>
+<p class="lead">Most recent first.</p>
+<ul class="pubs">
+<li><b>Experience with Gas Path Analysis for On-Wing Turbofan Condition Monitoring</b><span>Journal of Engineering for Gas Turbines and Power 136(1), 2013 · <a href="https://doi.org/10.1115/1.4025347" target="_blank" rel="noopener">DOI</a></span></li>
+<li><b>Component Map Tuning Procedure Using Adaptive Modeling</b><span>ASME Turbo Expo 2012 · <a href="https://doi.org/10.1115/GT2012-69688" target="_blank" rel="noopener">DOI</a></span></li>
+<li><b>Model-Based Gas Turbine Diagnostics at KLM Engine Services</b><span>ISABE 2011 / AIAA</span></li>
+<li><b>Gas Path Analysis on KLM In-Flight Engine Data</b><span>ASME Turbo Expo 2011 · <a href="https://doi.org/10.1115/GT2011-45625" target="_blank" rel="noopener">DOI</a></span></li>
+</ul>
+</div></section>
+
+<section class="contact"><div class="wrap">
+<h2>Let’s talk about your project</h2>
+<p>Tell me what you’re facing. A first conversation is a simple way to see whether and how I can help.</p>
+<a class="mail" href="mailto:info@emelvee.com">info@emelvee.com</a>
+<p style="margin:26px 0 0"><a class="mail" style="font-size:15px" href="index.html">← Back to EmElVee Engineering</a></p>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 EmElVee Engineering · EmElVee.com</div></footer>
+</body>
+</html>

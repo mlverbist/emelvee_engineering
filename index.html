@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EmElVee Engineering – Independent engineering consultancy</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<style>
+:root{--teal:#0f6e56;--teal-d:#094536;--bg:#f6f8f6;--surface:#fff;--text:#16282b;--muted:#55696c;--line:#d9e2e1;--accent:#c98a3b;--on-teal:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--teal:#2fa386;--teal-d:#0a2b23;--bg:#0b1a16;--surface:#12291f;--text:#e6efea;--muted:#9bb5ab;--line:#24443a;--accent:#e0a458}}
+:root[data-theme="dark"]{--teal:#2fa386;--teal-d:#0a2b23;--bg:#0b1a16;--surface:#12291f;--text:#e6efea;--muted:#9bb5ab;--line:#24443a;--accent:#e0a458}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;letter-spacing:.2px}
+.brand img{width:34px;height:34px;flex:none;display:block}
+.brand small{display:block;font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.6px;text-transform:uppercase;line-height:1.1}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:18px}
+nav a:hover{color:var(--teal)}
+@media(max-width:620px){nav a:not(.cta){display:none}}
+.cta{background:var(--teal);color:var(--on-teal)!important;padding:8px 16px;border-radius:8px;font-weight:600}
+.hero{background:linear-gradient(160deg,var(--teal-d),var(--teal));color:#fff;padding:84px 0 76px}
+.hero h1{font-size:clamp(32px,6vw,52px);line-height:1.1;margin:0 0 18px;max-width:16em;letter-spacing:-.5px}
+.hero p{font-size:clamp(17px,2.4vw,20px);max-width:36em;margin:0 0 30px;opacity:.92}
+.eyebrow{display:inline-block;color:var(--accent);font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:14px}
+.btn{display:inline-block;padding:13px 24px;border-radius:9px;font-weight:600;text-decoration:none;margin:0 10px 10px 0}
+.btn.p{background:var(--accent);color:#1b1305}
+.btn.s{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+section{padding:72px 0}
+h2{font-size:clamp(26px,4vw,34px);margin:0 0 10px;letter-spacing:-.3px}
+.lead{color:var(--muted);max-width:40em;margin:0 0 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{margin:0 0 8px;font-size:18px;color:var(--teal)}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.pubs{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:14px}
+.pubs li{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:16px 20px}
+.pubs b{display:block;font-size:16px}
+.pubs span{color:var(--muted);font-size:14px}
+.pubs a{color:var(--teal);font-weight:600}
+.thesis{background:var(--teal-d);color:#fff;border-radius:14px;padding:24px}
+.thesis h3{margin:0 0 6px;font-size:18px}
+.thesis p{margin:0 0 10px;opacity:.92}
+.thesis a{color:var(--accent);font-weight:600}
+.card a{color:var(--teal);font-weight:600;text-decoration:none}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.alt .card{background:var(--bg)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.step{padding-top:14px;border-top:3px solid var(--accent)}
+.step::before{counter-increment:s;content:"0" counter(s);font-weight:700;color:var(--accent);font-size:14px}
+.step h3{margin:4px 0 6px;font-size:18px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.num{font-size:34px;font-weight:700;color:var(--teal);line-height:1.1;margin-bottom:6px}
+.about{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:start}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.about p{margin:0 0 14px}
+.facts{list-style:none;padding:22px;margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;font-size:15px}
+.facts li{padding:8px 0;border-bottom:1px solid var(--line)}
+.facts li:last-child{border:0}
+.facts b{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.contact{background:var(--teal-d);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact p{max-width:34em;margin:0 auto 26px;opacity:.9}
+.contact a.mail{color:var(--accent);font-size:20px;font-weight:600;text-decoration:none}
+footer{padding:26px 0;font-size:13px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="brand" href="#top" aria-label="EmElVee Engineering">
+<img src="assets/logo.svg" width="34" height="34" alt="EmElVee Engineering logo">
+<span>EmElVee<small>Engineering</small></span></a>
+<nav><a href="#services">Services</a><a href="#approach">Approach</a><a href="research.html">Research</a><a href="about.html">About</a><a class="cta" href="#contact">Get in touch</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<span class="eyebrow">Independent engineering consultancy</span>
+<h1>Engineering insight. Practical solutions.</h1>
+<p>Clear technical thinking for businesses and property owners who need a trusted second pair of expert eyes: assessing, analysing and solving problems, then explaining the results in plain language.</p>
+<a class="btn p" href="#contact">Discuss your project</a><a class="btn s" href="#services">What I can help with</a>
+</div></div>
+
+<section id="services"><div class="wrap">
+<h2>How I can help</h2>
+<p class="lead">One independent engineer with a broad toolkit. Start with a question or a problem; we’ll work out the right scope together.</p>
+<div class="grid">
+<div class="card"><h3>Technical assessments</h3><p>Independent inspection and evaluation of buildings, components and systems, with clear findings, priorities and recommendations you can act on.</p></div>
+<div class="card"><h3>Data &amp; performance analysis</h3><p>Turning measurements and operating data into insight: diagnostics, performance modelling and condition monitoring for mechanical and energy systems.</p></div>
+<div class="card"><h3>Software &amp; test automation</h3><p>Automated test frameworks and engineering software that make quality repeatable, from lab hardware to mission-critical systems.</p></div>
+<div class="card"><h3>Project &amp; technical advisory</h3><p>Practical guidance for renovation and construction projects: scoping, contractor coordination, budget and schedule control.</p></div>
+<div class="card"><h3>Process &amp; administration digitisation</h3><p>Structuring inventory, administration and reporting so small and mid-sized businesses can see where they stand and decide faster.</p></div>
+<div class="card"><h3>Second opinions</h3><p>A sounding board before you commit: review of designs, quotes, reports or plans by someone with no stake in the outcome.</p></div>
+</div></div></section>
+
+<section id="approach" class="alt"><div class="wrap">
+<h2>A straightforward way of working</h2>
+<p class="lead">Advisory and approachable: no jargon for its own sake, no surprises on scope.</p>
+<div class="steps">
+<div class="step"><h3>Listen &amp; scope</h3><p>We discuss your situation and goals, then agree on a focused scope and deliverable.</p></div>
+<div class="step"><h3>Analyse</h3><p>Systematic investigation based on measurements, documents and site observations, not assumptions.</p></div>
+<div class="step"><h3>Advise</h3><p>A concise report in plain language with ranked findings and practical next steps.</p></div>
+<div class="step"><h3>Follow through</h3><p>Support while you implement: questions, coordination with contractors or suppliers, re-checks.</p></div>
+</div></div></section>
+
+<section id="track"><div class="wrap">
+<h2>Track record</h2>
+<p class="lead">Selected results from aerospace, defence and hands-on project work.</p>
+<div class="grid">
+<div class="card"><div class="num">150+</div><p>automated tests built for mission-critical defence communication systems, up from 60 manual ones, and a test cycle cut from 90 days to under 24 hours.</p></div>
+<div class="card"><div class="num">PhD</div><p>in aero-engine diagnostics from TU Delft (2017), carried out with KLM Engine Services. One journal paper and three conference papers published. <a href="research.html">Research &amp; publications →</a></p></div>
+<div class="card"><div class="num">82 m²</div><p>outdoor structure designed and built end-to-end, alongside the full redesign and reconstruction of a family home, managing contractors, budget and schedule.</p></div>
+<div class="card"><div class="num">3–5</div><p>engineers led at Thales Nederland, delivering software and test engineering for defence systems.</p></div>
+</div></div></section>
+
+<section id="about" class="alt"><div class="wrap about">
+<div>
+<h2>About EmElVee</h2>
+<p>EmElVee Engineering is the independent practice of Dr. Michel Verbist: an aerospace engineer (TU Delft) with a background spanning aerospace research, the defence industry and high-tech software.</p>
+<p>The common thread is analytical rigour applied to real problems: understanding how a system behaves, finding what matters, and recommending what to do about it. Based in Curaçao, working with clients locally and remotely.</p>
+<p><a href="about.html" style="color:var(--teal);font-weight:600;text-decoration:none">Read the founder’s story →</a></p>
+</div>
+<ul class="facts">
+<li><b>Background</b>PhD Aerospace Engineering, TU Delft</li>
+<li><b>Experience</b>Thales, Sogeti, KLM Engine Services collaboration</li>
+<li><b>Languages</b>English, Dutch, Papiamentu, Spanish</li>
+<li><b>Based in</b>Curaçao</li>
+</ul>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Let’s talk about your project</h2>
+<p>Tell me what you’re facing. A first conversation is a simple way to see whether and how I can help.</p>
+<a class="mail" href="mailto:info@emelvee.com">info@emelvee.com</a>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 EmElVee Engineering · EmElVee.com</div></footer>
+</body>
+</html>
